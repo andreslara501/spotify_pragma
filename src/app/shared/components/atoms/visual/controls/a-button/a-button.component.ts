@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-a-button',
+  selector: 'a-button',
   templateUrl: './a-button.component.html',
   styleUrls: ['./a-button.component.scss']
 })
 export class AButtonComponent implements OnInit {
+  public type:string = "button";
+
 
   constructor() { }
 

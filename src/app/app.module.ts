@@ -3,30 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AInputTextComponent } from './shared/components/atoms/forms/a-input-text/a-input-text.component';
-import { AImageComponent } from './shared/components/atoms/visual/a-image/a-image.component';
-import { AButtonComponent } from './shared/components/atoms/visual/controls/a-button/a-button.component';
-import { MAccountButtonsComponent } from './shared/components/molecules/accounts/m-account-buttons/m-account-buttons.component';
-import { OLoginComponent } from './shared/components/organims/login/o-login/o-login.component';
-import { LoginComponent } from './shared/components/templates/login/login.component';
-import { SignInComponent } from './pages/sign-in/sign-in.component';
-import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { PLoginComponent } from './pages/p-login/p-login.component';
+import { PSignInComponent } from './pages/p-sign-in/p-sign-in.component';
+import { PSignUpComponent } from './pages/p-sign-up/p-sign-up.component';
+import { AtomsSharedModule } from './shared/components/atoms/atoms-shared.module';
+import { MoleculesSharedModule } from './shared/components/molecules/molecules-shared.module';
+import { OrganismsSharedModule } from './shared/components/organims/organisms-shared.module';
+import { TemplatesSharedModule } from './shared/components/templates/templates-shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AInputTextComponent,
-    AImageComponent,
-    AButtonComponent,
-    MAccountButtonsComponent,
-    OLoginComponent,
-    LoginComponent,
-    SignInComponent,
-    SignUpComponent
+    PLoginComponent,
+    PSignInComponent,
+    PSignUpComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AtomsSharedModule,
+    MoleculesSharedModule,
+    OrganismsSharedModule,
+    TemplatesSharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
